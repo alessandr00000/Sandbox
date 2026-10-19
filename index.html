@@ -1,6 +1,18 @@
 <!DOCTYPE html?>
 <head>
   <title>My Online Portfolio</title>
+  <! how read, view, and accsess library for chart js /  copy and past these 3 lines> 
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+  <script scr="https://cdn.jddelivr.net/npm/chart.hs"></script>
+  <style>
+    <! style chart>
+    .chart-container {
+      width:90%;
+      max-width:800px;
+      margin:30px auto;
+    }
+  </style>
 </head>
 <body>
   <h1 style="text-align:center;">My Online Portfolio</h1>
@@ -8,5 +20,46 @@
   <div style="text-align:center;" class="image">
     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkfWpDjpyQp6Zs8haKmOEhkwjQ9BAcPAWzmcWSDhJnbA&s"
       </div>
+      <div class = "chart-container">
+        <canvas id = chart></canvas>canvas>]
+      </div>
+    <script>
+      <! for 2 charts, ctx2 ;"chart 2">
+      const ctx=document.getElementById("chart");
+      new Chart (ctx,{
+        /* everything above is what you copy for the anamited data chart simple data amount
+        type: "line",
+        data: {
+          labels: ["Monday","Tuesday","Wednesday", "Thursday", "Friday"],
+          dataset:[{
+            label:[6.00,12.00,18.00,18.00],
+
+            borderColor:"FF0145",
+            backgroundColor:"#E3DCDC",
+            borderWidth:3,
+            fill: true,
+            tension: 0.35,
+            pointRadius:4,
+            /*reccomended same color
+            pointBackgroundColor:"FF0145"
+            }]
+            },
+            options:{
+            responsive:true,
+            maintainAspectRatio:true,
+
+            plugins:{
+              legend:{
+                display:true
+                }
+                },
+                scales:{
+                  y:{
+                    beginAtZero: True
+                    }
+                    }
+                    }
+                    });
+    </script>
 </body>
 </html>
