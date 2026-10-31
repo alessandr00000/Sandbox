@@ -9,7 +9,7 @@
 /*page style*/
  body {
       font-family: Times New Roman, sans-serif;
-font-size: 18px;
+      font-size: 18px;
       color: #222222;
       text-align: center;
       margin: 0;
@@ -18,12 +18,12 @@ font-size: 18px;
  
     h1 {
       color: #FF0145;
-font-size: 44px;
+      font-size: 44px;
       margin-bottom: 8px;
     }
  
     h2 {
-font-size: 28px;
+      font-size: 28px;
       margin-top: 60px;
     }
  
@@ -43,7 +43,7 @@ font-size: 28px;
 </head>
 
 <body>
-
+  
 <! title/intro>
   <h1>Nicholas Rubiera</h1>
   <p>Welcome to my Resume accurate portfolio! </p>
@@ -59,29 +59,29 @@ font-size: 28px;
       <div class = "chart-container">
         <canvas id="chart1"></canvas>
       </div>
+
 <! chart 2 - bar graph>
 <h2>Look at this other chart:</h2>
-<div class = "chart-container">
-        <canvas id="chart2"></canvas>
+      <div class = "chart-container">
+      <canvas id="chart2"></canvas>
       </div>
 
 <!design choices paragraph>
 <p>
-
+Keeping the base of the portfolio from what we did in class, I added a second chart, a bar chart, and used the configuration and setup from Chart.js to reconfigure the code to reflect their template. Red is my favorite color, and I used different shades of red while maintaining a white backdrop. With little text, I wanted to highlight the graphs of my application progress this semester and my average hours of sleep. To do this, I adjusted the padding and margins accordingly. Having a second chart, I had to change the data element to data1 and data2 and do the same with ctx. In terms of the order of my code, I followed the same format we set up in class, but I had to change where new Chart came in within the script tag after changing how I set up the graphs to fit the Chart.js setup for line and bar graphs. Ultimately, I think this is a solid starter template for when I build a more serious portfolio, but I like how my voice can be seen through my work and how it illustrates my personality in a less serious presentation.
 </p>
-
-      
     <script>
+      
 //chart 1: line chart
-      const ctx1=document.getElementById("chart1");
-     const labels1 = ["September", "October", "November", "December", "January"];
+    const ctx1=document.getElementById("chart1");
+    const labels1 = ["September", "October", "November", "December", "January"];
     const data1 = {
       labels: labels1,
       datasets: [{
         label: "Internships Applied",
-        data: [2, 6, 5, 5, 0],
+        data:[2, 6, 5, 5, 0],
         fill: true,
-        borderColor: "#FF0145",
+        borderColor:"#FF0145",
         backgroundColor: "#FFD9E2",
         borderWidth: 2,
         tension: 0.35,
@@ -92,27 +92,27 @@ font-size: 28px;
 
 const config1 = {
 type:"line",
-data:data1,
+data: data1,
 };
 
 new Chart (ctx1, config1)
 
 // chart 2: bar chart
- const ctx2 = document.getElementById("chart2");
-
-const labels2 = ["September", "October", "November", "December", "January"];
-const data2 = {
+  const ctx2 = document.getElementById("chart2");
+  const labels2 = ["September", "October", "November", "December", "January"];
+  const data2 = {
         labels: labels2,
         datasets: [{
           label: "Average Hours of sleep (Fall Semester)",
           data: [9, 7, 6, 6, 5],
-         backgroundColor: [
- "rgba(255, 179, 193, 0.6)",
+          backgroundColor: [
+          "rgba(255, 179, 193, 0.6)",
           "rgba(255, 107, 138, 0.6)",
           "rgba(255, 1, 69, 0.6)",
           "rgba(179, 0, 47, 0.6)",
-          "rgba(92, 0, 22, 0.6)"        ],
-        borderColor: [
+          "rgba(92, 0, 22, 0.6)"        
+          ],
+          borderColor: [
           "rgb(255, 179, 193)",
           "rgb(255, 107, 138)",
           "rgb(255, 1, 69)",
@@ -127,7 +127,7 @@ const config2 = {
       type: "bar",
       data: data2,
       options: {
-        scales: {
+      scales: {
           y: {
             beginAtZero: true
           }
